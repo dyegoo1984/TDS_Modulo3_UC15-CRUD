@@ -33,8 +33,6 @@
           Emissão de Contrato de Construção
 
 
+=      =      =      =      =      =      =      =      =      =      =      =      =      =
 
-
-
-===========================================================================================
-          SENAC - TDS - 2023 - UC15 - Diego Oliveira
+SENAC - TDS - 2023 - UC15 - Diego Oliveira
