@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consulta de Funcionários - Construtora Oliveira</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <script src="../jquery.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="row" style="background-color: #04242c;">
+
+            <nav class="navbar navbar-expand-lg navbar-dark p-4" style="color: #dacbad">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo_head.png" style="width: 100%">
+                </a>
+                <div id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../clientes/cadastro.html">Cadastro <span>(Clientes)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../clientes/consulta.html">Consulta <span>(Clientes)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro <span>(Funcionários)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="consulta.html">Consulta <span>(Funcionários)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../manutencao/usuario.html">Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..//index.html">Sair</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <div class="row p-3" style="background-color: #dacbad;">
+            <div class="col-md-12 p-3">
+                <h4>Consulta de Funcionarios</h4>
+            </div>
+            <div class="row">
+                <div id="printFuncionarios" class="col-md-12 p-5">
+
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $.get("http://localhost:3000/funcionarios", function (data, status) {
+                    for (i = 0; i < data.length; i++) {
+                        $('#printFuncionarios').append(
+                                "<hr>" +
+                                "<h5><b>Código do Funcionário - </b>" + data[i].id +"</b></h5>" +
+                                "<table>" +
+                                "<tr><td><b>Nome: </b></td><td>" + data[i].nome + "</td></tr>" + 
+                                "<tr><td><b>RG: </b></td><td>" + data[i].rg + "</td></tr>" +
+                                "<tr><td><b>CPF: </b></td><td>" + data[i].cpf + "</td></tr>" +
+                                "<tr><td><b>Nacionalidade: </b></td><td>" + data[i].nacionalidade+ "</td></tr>" +
+                                "<tr><td><b>Logradouro: </b></td><td>" + data[i].rua + " " + data[i].numero + ", " + data[i].complemento + "</td></tr>" +
+                                "<tr><td><b>Bairro: </b></td><td>" + data[i].bairro + "</td></tr>" +
+                                "<tr><td><b>Cidade: </b></td><td>" + data[i].cidade + "</td></tr>" +
+                                "<tr><td><b>Estado: </b></td><td>" + data[i].uf + "</td></tr>" +
+                                "<tr><td><b>CEP: </b></td><td>" + data[i].cep + "</td></tr>" +
+                                "<tr><td><b>Telefone: </b></td><td>" + data[i].telefone1 + " | | " + data[i].telefone2 + "</td></tr>" +
+                                "<tr><td><b>Email: </b></td><td>" + data[i].email + "</td></tr></table>"
+                                );
+                    }
+                })
+            })
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Clientes - Construtora Oliveira</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilo.css">
+        <script src="../jquery.js"></script>
+        <script src="cadastroClientes.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="row" style="background-color: #04242c;">
+
+            <nav class="navbar navbar-expand-lg navbar-dark p-4" style="color: #dacbad">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo_head.png" style="width: 100%">
+                </a>
+                <div id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cadastro.html">Cadastro <span>(Clientes)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consulta.html">Consulta <span>(Clientes)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../funcionarios/cadastro.html">Cadastro <span>(Funcionários)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../funcionarios/consulta.html">Consulta <span>(Funcionários)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../manutencao/usuario.html">Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..//index.html">Sair</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <div class="row p-3" style="background-color: #dacbad;">
+            <div class="col-md-12 p-3">
+                <h4>Cadastro de Clientes</h4>
+                <form id="cadastroClientes" method="post">
+                    <div id="dadosPessoais" class="row">
+                        <div class="row p-1">
+                            <div class="col-md-8">
+                                <label for="nome" class="form-label" >Nome:</label>
+                                <input type="text" class="form-control" name="nome" id="nome" required placeholder="Informe o nome completo">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="rg" class="form-label" >RG:</label>
+                                <input type="text" class="form-control" name="rg" id="rg" required placeholder="Apenas números" pattern="[0-9]+$">
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-md-4">
+                                <label for="cpf" class="form-label" >CPF:</label>
+                                <input type="text" class="form-control" name="cpf" id="cpf" required maxlength="11" minlength="11" placeholder="Apenas números (11 dígitos)" pattern="[0-9]{11}$" title="Informe um número de CPF válido">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nacionalidade" class="form-label" >Nacionalidade:</label>
+                                <input type="text" class="form-control" name="nacionalidade" id="nacionalidade">
+                            </div>
+                            <div class="col-md-2">
+                                <button id="avancar1" type="button" class="btn btn-primary" style="background-color: #04242c; margin-top: 19%; width: 100%">Avançar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cep_api" class="row">
+                        <div class="row p-1">
+                            <div class="col-md-4">
+                                <label for="cep" class="form-label" >CEP:</label>
+                                <input type="text" class="form-control" name="cep" id="cep" required pattern="[0-9]{8}$" placeholder="Apenas números (8 dígitos)" title="Informe um CEP válido">
+                            </div>
+                            <div class="col-md-2">
+                                <button id="avancar2" type="button" class="btn btn-primary" style="background-color: #04242c; margin-top: 19%; width: 100%">Avançar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="endereco" class="row">
+                        <div class="row p-1">
+                            <div class="col-md-6">
+                                <label for="rua" class="form-label" >Rua:</label>
+                                <input type="text" class="form-control" name="rua" id="rua" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="numero" class="form-label" >Número:</label>
+                                <input type="text" class="form-control" name="numero" id="numero" required pattern="[0-9]+$">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="complemento" class="form-label" >Complemento:</label>
+                                <input type="text" class="form-control" name="complemento" id="complemento">
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-md-4">
+                                <label for="bairro" class="form-label" >Bairro:</label>
+                                <input type="text" class="form-control" name="bairro" id="bairro" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cidade" class="form-label" >Cidade:</label>
+                                <input type="text" class="form-control" name="cidade" id="cidade" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="uf" class="form-label" >Estado:</label>
+                                <input type="text" class="form-control" name="uf" id="uf" required>
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-md-2">
+                                <button id="avancar3" type="button" class="btn btn-primary" style="background-color: #04242c; margin-top: 19%; width: 100%">Avançar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contato" class="row">
+                        <div class="row p-1">
+                            <div class="col-md-3">
+                                <label for="telefone1" class="form-label" >Telefone:</label>
+                                <input type="tel" class="form-control" name="telefone1" id="telefone1" required pattern="\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(00)00000-0000" title="Informe um telefone válido">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="telefone2" class="form-label" >Telefone:</label>
+                                <input type="tel" class="form-control" name="telefone2" id="telefone2" pattern="\([0-9]{2}\)[0-9]{4,5}-[0-9]{4}$" placeholder="(00)00000-0000" title="Informe um telefone válido">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label" >Email:</label>
+                                <input type="email" class="form-control" name="email" id="email" required title="Informe um email válido">
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <button id="avancar4" type="submit" class="btn btn-primary" style="background-color: #04242c; margin-top: 19%; width: 100%">Salvar Dados</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="limpar" type="reset" class="btn btn-primary" style="background-color: #04242c; margin-top: 19%; width: 100%">Limpar Campos</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <script>
+            const formClientes = document.getElementById("cadastroClientes");
+
+            formClientes.addEventListener("submit", evento => {
+                evento.preventDefault();
+
+                const formData = new FormData(formClientes);
+                const data = Object.fromEntries(formData);
+
+                fetch("http://localhost:3000/clientes", {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "aplication/json"
+                    },
+                    body: JSON.stringify(data)
+                }).then(res => res.json()).then(data => console.log(data))
+            })
+        </script>
+    </body>
+
+</html>

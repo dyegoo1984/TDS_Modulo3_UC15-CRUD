@@ -1,0 +1,22 @@
+
+html {
+    background-color: #d3a35c;
+    background-size:auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04242c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+head {
+    background-color: #d3a35c;
+}
+
+span {
+    font-style: italic;
+    font-size: small;
+}
+
+

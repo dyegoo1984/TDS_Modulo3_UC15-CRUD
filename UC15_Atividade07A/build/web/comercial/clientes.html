@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Construtora Oliveira</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="../jquery.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+        
+
+    </head>
+    <body>
+
+        <div class="row p-4" style="background-color: #d3a35c;">
+            <div class="col-md-3" style="background-color: #04242c;">
+                <img src="../images/logo.png" style="width: 100%">
+                <article id="menu1" >
+
+                </article>
+
+
+            </div>
+            <div class="col-md-9 p-3" style="background-color: #dacbad;">
+                <article id="clientes" >
+                    <div class="row">
+                        <div class="col-md-1"><hr/></div>
+                        <div class="col-md-3" style="text-align: center"><h2 class="h2">Clientes</h2></div>
+                        <div class="col-md-8"><hr/></div>
+
+                    </div>
+                    <div id="cadastrarClientes">
+                        <div class="row">
+                            <p class="p1">Cadastrar</p>
+                        </div>
+                        <form>
+                            <div class="row p-1">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Nome">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="rgCliente" name="rgCliente" placeholder="RG">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="cpfCliente" name="cpfCliente" placeholder="CPF">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="ruaCliente" name="ruaCliente" placeholder="Rua">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="numCliente" name="numCliente" placeholder="Número">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="complementoCliente" name="complementoCliente" placeholder="Complemento">
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="bairroCliente" name="bairroCliente" placeholder="Bairro">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="cepCliente" name="cepCliente" placeholder="CEP">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="cidadeCliente" name="cidadeCliente" placeholder="Cidade">
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control" id="estadoCliente" name="estadoCliente"></select>
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-4">
+                                    <input type="tel" class="form-control" id="telefoneCliente" name="telefoneCliente" placeholder="Telefone">
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control" id="emailCliente" name="emailCliente" placeholder="Email">
+                                </div>
+                                
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-md-8">
+                                    <textarea class="form-control" id="historicoCliente" name="historicoCliente" placeholder="Histórico de atendimento"></textarea>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row p-1">
+                                        <input type="text" class="form-control" id="vendedorCliente" name="vendedorCliente" placeholder="Vendedor">
+                                    </div>
+                                    <div class="row p-1">
+                                        <input type="date" class="form-control" id="dataCliente" name="dataCliente" placeholder="Data do atendimento">
+                                    </div>
+                                    <div class="row p-1">
+                                        <button type="submit" class="btn btn-primary" style="background-color: #04242c;width: 100%" id="salvarCliente" name="salvarCliente">Salvar</button>
+                                    </div>
+                                </div>
+                        </form>
+
+                    </div>
+                    <div id="exibirClientes">
+                        <div class="row">
+                            <p class="p1">Filtrar:</p>
+                        </div>
+                        <div class="row">
+                            <form>
+                                <div class="row p-1">
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" id="buscaIdCliente" name="buscaIdCliente" placeholder="Código">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="buscaNomeCliente" name="buscaNomeCliente" placeholder="Nome">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="buscaCpfCliente" name="buscaCpfCliente" placeholder="CPF">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary" style="background-color: #04242c;width: 100%" id="btnBuscarCliente" name="btnBuscarCliente">Buscar</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </article>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>
