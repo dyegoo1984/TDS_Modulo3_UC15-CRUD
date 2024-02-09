@@ -5,6 +5,7 @@
 
 2 - Tecnologias Aplicadas: 
       Java
+      Javascript
       SQL
 
 3 - Time de Desenvolvedores:
