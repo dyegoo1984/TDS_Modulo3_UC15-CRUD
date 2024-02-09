@@ -18,21 +18,10 @@
 
 5 - Funcionalidades:
       Cadastro de Funcionários
-        Consulta de Funcionários
-          Atualização de Funcionários
+      Consulta de Funcionários
       Cadastro de Usuários
-        Consulta de Usuários
-          Atualização de Senha
       Cadastro de Clientes
-        Consulta de Clientes
-          Atualização de Clientes
-      Cadastro de Projetos
-        Consulta de Projetos
-          Atualização de Projetos
-      Cadastro de Vendas
-        Consulta de Vendas
-          Emissão de Contrato de Construção
-
+      Consulta de Clientes
 
 =      =      =      =      =      =      =      =      =      =      =      =      =      =
 
