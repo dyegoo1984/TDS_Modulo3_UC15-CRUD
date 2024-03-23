@@ -1,0 +1,15 @@
+com/uc15/atividade7/controller/SiteController.class
+com/uc15/atividade7/repository/FuncionarioRepository.class
+com/uc15/atividade7/ServletInitializer.class
+com/uc15/atividade7/service/FuncionarioService.class
+com/uc15/atividade7/Atividade7Application.class
+com/uc15/atividade7/controller/FuncionarioAPIController.class
+com/uc15/atividade7/controller/UsuarioAPIController.class
+com/uc15/atividade7/model/Funcionario.class
+com/uc15/atividade7/controller/ClienteAPIController.class
+com/uc15/atividade7/service/UsuarioService.class
+com/uc15/atividade7/repository/UsuarioRepository.class
+com/uc15/atividade7/model/Usuario.class
+com/uc15/atividade7/repository/ClienteRepository.class
+com/uc15/atividade7/service/ClienteService.class
+com/uc15/atividade7/model/Cliente.class
