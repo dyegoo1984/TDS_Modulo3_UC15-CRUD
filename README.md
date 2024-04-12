@@ -1,3 +1,10 @@
+CRUD Desenvolvido usando dependencias do Spring Framework no Backend e integração com o Frontend. Deploy com arquivo .war
+
+Versão final do trabalho de conclusão do projeto integrador do curso Técnico em Desenvolvimento de Sistemas.
+
+=      =      =      =      =      =      =      =      =      =      =      =      =      =
+
+
 ### Sistema de gestão Construtora Oliveira ###
 
 1 - Status do Projeto:
